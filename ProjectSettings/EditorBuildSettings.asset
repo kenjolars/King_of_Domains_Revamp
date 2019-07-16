@@ -12,16 +12,16 @@ EditorBuildSettings:
     path: Assets/Scenes/1 Menu.unity
     guid: 34381f0617d15f449bd7a1767fd9bf50
   - enabled: 1
-    path: Assets/Scenes/2 Map Select.unity
-    guid: d69f3a40f4d67fa4ab1fa3a01db9570d
-  - enabled: 1
-    path: Assets/Scenes/3 Char Select.unity
+    path: Assets/Scenes/2 Char Select.unity
     guid: a864042c5003b1542bc46be44134e3ba
   - enabled: 1
-    path: Assets/Scenes/4 MapA.unity
+    path: Assets/Scenes/3 Map Select.unity
+    guid: d69f3a40f4d67fa4ab1fa3a01db9570d
+  - enabled: 1
+    path: Assets/Scenes/4 Farmmap.unity
     guid: 8481766fb460c164ca09716e29bacc75
   - enabled: 1
-    path: Assets/Scenes/5 MapB.unity
+    path: Assets/Scenes/5 Fortmap.unity
     guid: 8a10faac676a38b4c8c61bcf0db87097
   - enabled: 1
     path: Assets/Scenes/6 MapC.unity
