@@ -8,7 +8,7 @@ public class CharSelect : MonoBehaviour
     public void CharacterSelectFunction (int SelectedNum)
     {
         PlayerNum = SelectedNum;
-        Application.LoadLevel("6 Fortmap");
+        Application.LoadLevel("3 Char Select2");
 
     }
 }
