@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5453409381181483153}
   - component: {fileID: 1826538488533827290}
-  - component: {fileID: 3334303405379143279}
+  - component: {fileID: 5947674080744649498}
   m_Layer: 0
-  m_Name: Temp1
+  m_Name: Temp1P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3334303405379143279
+--- !u!114 &5947674080744649498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,6 +92,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c363562ba6542344eacb1f91c58df359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 1
+  playerNumber: 2
   Health: 100
   healthBar: {fileID: 0}
