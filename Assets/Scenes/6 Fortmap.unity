@@ -4753,7 +4753,7 @@ PrefabInstance:
     - target: {fileID: 1671075078550096381, guid: 607121c56bda4264faed049604dbef61,
         type: 3}
       propertyPath: m_Name
-      value: P2Healthbar_Fortmap
+      value: P2Healthbar
       objectReference: {fileID: 0}
     - target: {fileID: 1671075078550096382, guid: 607121c56bda4264faed049604dbef61,
         type: 3}
@@ -4882,7 +4882,7 @@ PrefabInstance:
     - target: {fileID: 2186499075794698208, guid: 2d2d47e174ab3fc4b9b2a48299db2ffe,
         type: 3}
       propertyPath: m_Name
-      value: P1Healthbar_Fortmap
+      value: P1Healthbar
       objectReference: {fileID: 0}
     - target: {fileID: 2186499075794698239, guid: 2d2d47e174ab3fc4b9b2a48299db2ffe,
         type: 3}
