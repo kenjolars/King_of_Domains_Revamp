@@ -96,7 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   Health: 100
-  healthBar: {fileID: 0}
+  healthbar: {fileID: 2186499075794698208, guid: 2d2d47e174ab3fc4b9b2a48299db2ffe,
+    type: 3}
 --- !u!50 &5909889331844355387
 Rigidbody2D:
   serializedVersion: 4

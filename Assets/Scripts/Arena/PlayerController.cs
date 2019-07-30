@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     float moveSpeed = 3;
     float jumpForce = 6;
     Rigidbody2D rigidBody;
-    public GameObject healthBar;
+    public GameObject healthbar;
     Slider hpBar;
 
     void Awake()
@@ -29,13 +29,13 @@ public class PlayerController : MonoBehaviour
             transform.localScale = theScale;
         }
         rigidBody = GetComponent<Rigidbody2D>();
-        hpBar = healthBar.GetComponent<Slider>();
+        hpBar = healthbar.GetComponent<Slider>();
         hpBar.maxValue = Health;
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     void OnCollisionEnter2D(Collision2D collision)
