@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
             }
         }
         hpBar.value = Health;
+
+
     }
     void FixedUpdate()
     {
