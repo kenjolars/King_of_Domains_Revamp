@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour
             {
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
             }
+<<<<<<< HEAD
             if (Input.GetKey(KeyCode.O))
             {
                 P2AttackArea.SetActive(true);
@@ -140,6 +141,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+=======
+        }
+>>>>>>> parent of 8930f22... Animations finalised
         hpBar.value = Health;
     }
     void FixedUpdate()
