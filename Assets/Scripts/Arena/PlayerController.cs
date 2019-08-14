@@ -15,16 +15,12 @@ public class PlayerController : MonoBehaviour
     public GameObject healthbar;
     Slider hpBar;
 
-    private int P1ScoreCount;
-    private int P2ScoreCount;
-    public Text P1Score;
-    public Text P2Score;
+    private int OpposingScoreCount;
+    public Text OpposingScore;
     public bool isPlayerAlive = true;
     public GameObject ContinueText;
-    public GameObject P1WinText;
-    public GameObject P2WinText;
-    public GameObject P1AttackArea;
-    public GameObject P2AttackArea;
+    public GameObject WinText;
+    public GameObject AttackArea;
 
     public GameObject[] Characters1;
     public Transform PlayerSpawnPoint1;
@@ -51,27 +47,20 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        P1ScoreCount = 0;
-        P2ScoreCount = 0;
+        OpposingScoreCount = 0;
 
         P1ScoreText();
         P2ScoreText();
 
         ContinueText.SetActive(false);
-        P1WinText.SetActive(false);
-        P2WinText.SetActive(false);
+        WinText.SetActive(false);
 
-        P1AttackArea.SetActive(false);
-        P2AttackArea.SetActive(false);
+        AttackArea.SetActive(false);
     }
 
     void P1ScoreText ()
     {
-        P1Score.text = "Score: " + P1ScoreCount.ToString();
-    }
-    void P2ScoreText()
-    {
-        P2Score.text = "Score: " + P2ScoreCount.ToString();
+        OpposingScore.text = "Score: " + OpposingScoreCount.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -101,16 +90,34 @@ public class PlayerController : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.V))
             {
-                P1AttackArea.SetActive(true);
+                AttackArea.SetActive(true);
             }
-            else P1AttackArea.SetActive(false);
+            else AttackArea.SetActive(false);
 
-
-            if (isPlayerAlive == false && (Input.GetKey(KeyCode.Space) && P1ScoreCount < 2))
+            if (Health == 0)
+            {
+                isPlayerAlive = false;
+            }
+            if (isPlayerAlive == false)
+            {
+                Time.timeScale = 0f;
+                ContinueText.SetActive(true);
+                OpposingScoreCount = ScoreCount + 1;
+                P2ScoreText();
+            }
+            else
+            {
+                ContinueText.SetActive(false);
+            }
+            if (isPlayerAlive == false && (Input.GetKey(KeyCode.Space) && OpposingScoreCount < 2))
             {
                 ContinueText.SetActive(false);
                 Time.timeScale = 1f;
                 Instantiate(Characters1[CharSelect.PlayerNum], PlayerSpawnPoint1.position, PlayerSpawnPoint1.rotation);
+            }
+            if (OpposingScoreCount == 3)
+            {
+                WinText.SetActive(true);
             }
         }
         if (playerNumber == 2)
@@ -154,25 +161,6 @@ public class PlayerController : MonoBehaviour
                 {
                     Flip();
                 }
-            }
-            if (Health == 0)
-            {
-                isPlayerAlive = false;
-            }
-            if (isPlayerAlive == false)
-            {
-                Time.timeScale = 0.1f;
-                ContinueText.SetActive(true);
-                P2ScoreCount = P2ScoreCount + 1;
-                P2ScoreText();
-            }
-            else
-            {
-                ContinueText.SetActive(false);
-            }
-            if (P1ScoreCount == 3)
-            {
-                P1WinText.SetActive(true);
             }
         }
         if (playerNumber == 2)
