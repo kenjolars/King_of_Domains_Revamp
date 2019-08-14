@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1671075078550096382}
   - component: {fileID: 1671075078550096383}
   m_Layer: 5
-  m_Name: P2Healthbar_Fortmap
+  m_Name: P2Healthbar
   m_TagString: P2healthbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

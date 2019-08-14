@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7458398985045028013}
   - component: {fileID: 8853029893634533661}
   m_Layer: 0
-  m_Name: Temp2
+  m_Name: TempOrc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,4 +94,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   Health: 100
-  healthBar: {fileID: 0}
+  healthbar: {fileID: 0}
+  P1Score: {fileID: 0}
+  P2Score: {fileID: 0}
+  isPlayerAlive: 1
+  ContinueText: {fileID: 0}
+  P1WinText: {fileID: 0}
+  P2WinText: {fileID: 0}
+  P1AttackArea: {fileID: 0}
+  P2AttackArea: {fileID: 0}
+  Characters1: []
+  PlayerSpawnPoint1: {fileID: 0}
+  Characters2: []
+  PlayerSpawnPoint2: {fileID: 0}

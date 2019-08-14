@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2186499075794698239}
   - component: {fileID: 2186499075794698238}
   m_Layer: 5
-  m_Name: P1Healthbar_Fortmap
+  m_Name: P1Healthbar
   m_TagString: P1healthbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
