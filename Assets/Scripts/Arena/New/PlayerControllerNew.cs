@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerNew : MonoBehaviour
 {
     public int playerNumber = 1;
     public float Health = 100;
@@ -15,16 +15,9 @@ public class PlayerController : MonoBehaviour
     public GameObject healthbar;
     Slider hpBar;
 
-    public Transform[] playerSpawnPoints;
-    public GameObject[] characterPrefabs;
-
     public GameObject AttackArea;
-    public GameObject PlayerIsDead;
-
-    public GameObject[] Characters1;
-    public Transform PlayerSpawnPoint1;
-    public GameObject[] Characters2;
-    public Transform PlayerSpawnPoint2;
+    public GameObject P1Symbol;
+    public GameObject P2Symbol;
 
     void Awake()
     {
@@ -43,10 +36,14 @@ public class PlayerController : MonoBehaviour
         hpBar = healthbar.GetComponent<Slider>();
         hpBar.maxValue = Health;
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
         AttackArea.SetActive(false);
+        P1Symbol.SetActive(false);
+        P2Symbol.SetActive(false);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -68,18 +65,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
-        hpBar.value = Health;
-
         if (Health == 0)
         {
-            PlayerIsDead.SetActive(true);
-        }
-        if (Health == 0 && (Input.GetKey(KeyCode.Y)))
-        {
-            Health = 100;
-            PlayerIsDead.SetActive(false);
+            gameObject.SetActive(false);
         }
 
         //Player Movement
@@ -95,9 +83,8 @@ public class PlayerController : MonoBehaviour
             }
             else AttackArea.SetActive(false);
 
-            PlayerIsDead.name = "P1IsKilled";
+            P1Symbol.SetActive(true);
         }
-
         if (playerNumber == 2)
         {
             if (grounded && (Input.GetKey(KeyCode.UpArrow)))
@@ -110,7 +97,7 @@ public class PlayerController : MonoBehaviour
             }
             else AttackArea.SetActive(false);
 
-            PlayerIsDead.name = "P2IsKilled";
+            P2Symbol.SetActive(true);
         }
     }
     void FixedUpdate()

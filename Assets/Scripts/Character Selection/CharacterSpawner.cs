@@ -17,6 +17,8 @@ public class CharacterSpawner : MonoBehaviour
         GameObject newCharacterPlayerTwo = Instantiate(characterPrefabs[(int)SpawnDataHolder.selectedCharacters[1] - 1], playerSpawnPoints[1].position, Quaternion.identity) as GameObject;
 
         newCharacterPlayerOne.GetComponent<PlayerController>().playerNumber = 1;
+        newCharacterPlayerOne.name = "Player One Controller";
         newCharacterPlayerTwo.GetComponent<PlayerController>().playerNumber = 2;
+        newCharacterPlayerTwo.name = "Player Two Controller";
     }
 }

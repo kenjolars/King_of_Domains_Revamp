@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5909889331844355387}
   - component: {fileID: 2041513170400450863}
   m_Layer: 0
-  m_Name: TempElf
+  m_Name: Temp0
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,6 +32,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 759662764938229076}
+  - {fileID: 6196382187067439761}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,19 +100,19 @@ MonoBehaviour:
   Health: 100
   healthbar: {fileID: 2186499075794698208, guid: 2d2d47e174ab3fc4b9b2a48299db2ffe,
     type: 3}
-  P1Score: {fileID: 8277115603966099199, guid: 98a35d6f5cd0d0443bbb754bf6e95f01, type: 3}
-  P2Score: {fileID: 0}
-  isPlayerAlive: 1
-  ContinueText: {fileID: 6954593712836732395, guid: 51461f3c4914a91428f08fb7abd3c22c,
-    type: 3}
-  P1WinText: {fileID: 6954593712836732395, guid: 51461f3c4914a91428f08fb7abd3c22c,
-    type: 3}
-  P2WinText: {fileID: 0}
-  P1AttackArea: {fileID: 1759322664071463533}
-  P2AttackArea: {fileID: 0}
-  Characters1: []
+  playerSpawnPoints: []
+  characterPrefabs: []
+  AttackArea: {fileID: 1759322664071463533}
+  PlayerIsDead: {fileID: 6404100018524194844}
+  Characters1:
+  - {fileID: 551978320712788884}
+  - {fileID: 5382073985585722598, guid: 1703d42297364734493c2c0dffdc37de, type: 3}
+  - {fileID: 5085724193781812791, guid: cf294f7907125d7469fa9c3437a038bd, type: 3}
   PlayerSpawnPoint1: {fileID: 0}
-  Characters2: []
+  Characters2:
+  - {fileID: 551978320712788884}
+  - {fileID: 5382073985585722598, guid: 1703d42297364734493c2c0dffdc37de, type: 3}
+  - {fileID: 5085724193781812791, guid: cf294f7907125d7469fa9c3437a038bd, type: 3}
   PlayerSpawnPoint2: {fileID: 0}
 --- !u!50 &5909889331844355387
 Rigidbody2D:
@@ -280,3 +281,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsTriggered: 0
+--- !u!1 &6404100018524194844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6196382187067439761}
+  m_Layer: 0
+  m_Name: IsDead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6196382187067439761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6404100018524194844}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2961419259554937089}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

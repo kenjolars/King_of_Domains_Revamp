@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - P1healthbar
   - P2healthbar
+  - AttackZone
+  - PlayerOneIdentifier
+  - PlayerTwoIdentifier
   layers:
   - Default
   - TransparentFX
