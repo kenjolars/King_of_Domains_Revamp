@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     public float Health = 100;
     bool facingRight;
     bool grounded = false;
-    float moveSpeed = 3;
-    float jumpForce = 6;
+    public float moveSpeed = 3;
+    public float jumpForce = 6;
     Rigidbody2D rigidBody;
     public GameObject healthbar;
     Slider hpBar;
