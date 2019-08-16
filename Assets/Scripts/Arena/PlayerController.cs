@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
             {
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
             }
-            if (Input.GetKey(KeyCode.V))
+            if (Input.GetKey(KeyCode.V) || Input.GetKey(KeyCode.B))
             {
                 AttackArea.SetActive(true);
             }
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
             {
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
             }
-            if (Input.GetKey(KeyCode.O))
+            if (Input.GetKey(KeyCode.O) || Input.GetKey(KeyCode.P))
             {
                 AttackArea.SetActive(true);
             }
